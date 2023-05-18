@@ -13,7 +13,7 @@
     },
     "runtimeVersion": "1",
     "updates": {
-      "url": "http://https://custom-expo-updates-server-lrr5kx6z2-lai3d.vercel.app/api/manifest",
+      "url": "https://custom-expo-updates-server.vercel.app/api/manifest",
       "enabled": true,
       "fallbackToCacheTimeout": 30000,
       "codeSigningCertificate": "./code-signing/certificate.pem",
