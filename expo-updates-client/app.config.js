@@ -7,7 +7,7 @@ module.exports = () => {
     } else if (process.env.APP_ENV === "development") {
       return require("./app.development.json");
     } else {
-      return require("./app.staging.json");
+      return require("./app.json");
     }
   };
   
