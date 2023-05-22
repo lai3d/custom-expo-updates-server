@@ -52,7 +52,7 @@ export default async function manifestEndpoint(req: NextApiRequest, res: NextApi
     return;
   }
 
-  console.log("after runtime version check");
+  console.log("after runtime version check", runtimeVersion);
 
   let updateBundlePath: string;
   try {
@@ -65,7 +65,11 @@ export default async function manifestEndpoint(req: NextApiRequest, res: NextApi
     return;
   }
 
+  console.log('updateBundlePath', updateBundlePath);
+
   const updateType = await getTypeOfUpdateAsync(updateBundlePath);
+
+  console.log('updateType', updateType);
 
   try {
     try {
@@ -113,12 +117,19 @@ async function putUpdateInResponseAsync(
   platform: string,
   protocolVersion: number
 ): Promise<void> {
+  console.log('protocolVersion', protocolVersion);
+
   const currentUpdateId = req.headers['expo-current-update-id'];
   const { metadataJson, createdAt, id } = await getMetadataAsync({
     updateBundlePath,
     runtimeVersion,
   });
 
+  console.log('currentUpdateId', currentUpdateId);
+  console.log('metadataJson', metadataJson);
+  console.log('createdAt', createdAt);
+  console.log('id', id);
+  
   // NoUpdateAvailable directive only supported on protocol version 1
   // for protocol version 0, serve most recent update as normal
   if (currentUpdateId === id && protocolVersion === 1) {
@@ -129,6 +140,9 @@ async function putUpdateInResponseAsync(
     updateBundlePath,
     runtimeVersion,
   });
+
+  console.log('expoConfig', expoConfig);
+
   const platformSpecificMetadata = metadataJson.fileMetadata[platform];
   const manifest = {
     id: convertSHA256HashToUUID(id),
