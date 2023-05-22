@@ -177,7 +177,8 @@ async function putUpdateInResponseAsync(
     },
   };
 
-  console.log('manifest', manifest);
+  console.log('manifest.assets', manifest.assets);
+  console.log('manifest.launchAsset', manifest.launchAsset);
 
   let signature = null;
   const expectSignatureHeader = req.headers['expo-expect-signature'];
