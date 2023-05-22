@@ -144,6 +144,9 @@ async function putUpdateInResponseAsync(
   console.log('expoConfig', expoConfig);
 
   const platformSpecificMetadata = metadataJson.fileMetadata[platform];
+
+  console.log('platformSpecificMetadata', platformSpecificMetadata);
+
   const manifest = {
     id: convertSHA256HashToUUID(id),
     createdAt,
@@ -174,8 +177,13 @@ async function putUpdateInResponseAsync(
     },
   };
 
+  console.log('manifest', manifest);
+
   let signature = null;
   const expectSignatureHeader = req.headers['expo-expect-signature'];
+
+  console.log('expectSignatureHeader', expectSignatureHeader);
+
   if (expectSignatureHeader) {
     const privateKey = await getPrivateKeyAsync();
     if (!privateKey) {
@@ -212,6 +220,8 @@ async function putUpdateInResponseAsync(
   form.append('extensions', JSON.stringify({ assetRequestHeaders }), {
     contentType: 'application/json',
   });
+
+  console.log('form', form);
 
   res.statusCode = 200;
   res.setHeader('expo-protocol-version', protocolVersion);
