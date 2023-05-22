@@ -222,7 +222,7 @@ async function putUpdateInResponseAsync(
     contentType: 'application/json',
   });
 
-  console.log('form', form);
+  //console.log('form', form);
 
   res.statusCode = 200;
   res.setHeader('expo-protocol-version', protocolVersion);
