@@ -4364,6 +4364,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-native: 0.71.8
+    react-native-logs: ^5.0.1
     react-native-web: ~0.18.10
   languageName: unknown
   linkType: soft
@@ -7667,6 +7668,13 @@ __metadata:
   version: 0.71.18
   resolution: "react-native-gradle-plugin@npm:0.71.18"
   checksum: 19f0a41e29c9210ff495010aaa612f2c2f4f5f937b6c20266c8dc62f4ccedc65bb7576de59b2f3fd2bb8044ce9785e56673879f2eb452f948e6659a5e1fa5894
+  languageName: node
+  linkType: hard
+
+"react-native-logs@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "react-native-logs@npm:5.0.1"
+  checksum: 71af385c85a7d45d2046ee9fa05ec49e989a446660742d732e2ba210528fb5145f81308af3f65be607bbf207a875480344cca3ec5e7943a7c10ba2d882f28266
   languageName: node
   linkType: hard
 
