@@ -3,7 +3,7 @@
     "name": "expo-updates-client",
     "slug": "expo-updates-client",
     "owner": "larry.react",
-    "version": "2.0.2",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -13,7 +13,7 @@
     },
     "runtimeVersion": "2",
     "updates": {
-      "url": "https://custom-expo-updates-server.vercel.app/api/manifest",
+      "url": "http://localhost:3000/api/manifest",
       "enabled": true,
       "fallbackToCacheTimeout": 30000,
       "codeSigningCertificate": "./code-signing/certificate.pem",
