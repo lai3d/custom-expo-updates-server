@@ -129,6 +129,9 @@ export async function getMetadataAsync({
     const metadataJson = JSON.parse(updateMetadataBuffer.toString('utf-8'));
     const metadataStat = await fs.stat(metadataPath);
 
+    console.log('metadataStat', metadataStat);
+    console.log('metadataStat.birthtime', metadataStat.birthtime);
+
     return {
       metadataJson,
       createdAt: new Date(metadataStat.birthtime).toISOString(),

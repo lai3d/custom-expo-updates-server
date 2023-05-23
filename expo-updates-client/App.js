@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Larry Test 2023-05-19 16:19</Text>
+      <Text>Larry Test 2023-05-22 18:19</Text>
       <Text>{Constants.expoConfig.name}</Text>
       <Text>{Constants.expoConfig.version}</Text>
       <Text>{Constants.expoConfig.updates.url}</Text>
